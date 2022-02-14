@@ -7,6 +7,26 @@ A Flutter package provide responsive, dynamic, configurable size for each device
 - Responsive, adaptive size
 - Dynamic load size data from predefined files from assets
 
+<table>
+  <tr>
+      <td>
+        <img src="./screen_capture/responsive_tablet_sample.png">
+      </td>
+      <td>
+        <img src="./screen_capture/responsive_phone_sample.png" >
+      </td>
+    </tr>
+ </table>
+ 
+Without using this packages: 
+<table>
+  <tr>
+    <td>
+      <img src="./screen_capture/no_responsive_tablet_sample.png">
+    </td>
+  </tr>
+ </table>
+ 
 ## Getting Started
 
 This package is use to develop app which use Bloc pattern clearer, quicker, easier by wrapping
