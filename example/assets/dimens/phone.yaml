@@ -1,0 +1,6 @@
+homeScreen:
+  contentPadding: 10
+  iconSize: 50
+  titleTextSize: 24
+  descriptionTextSize: 16
+  widgetSpaceSize: 16
