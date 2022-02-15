@@ -55,28 +55,28 @@ extension ESizerStringExtension on String {
   /// Calculates the height depending on the device's screen size
   ///
   /// Eg: 20.sh -> will take 20% of the screen's height
-  double get sh => ESizerUtil.sizeMap[this]?.sh ?? 0;
+  double get sh => ESizerUtil.getValueOf(this).sh;
 
   /// Calculates the width depending on the device's screen size
   ///
   /// Eg: 20.sw -> will take 20% of the screen's width
-  double get sw => ESizerUtil.sizeMap[this]?.sw ?? 0;
+  double get sw => ESizerUtil.getValueOf(this).sw;
 
   /// Calculates the real width depending on the design's screen size
   ///
   /// Eg: 20.w -> will be 30 if design width is 300 && device width is 450
-  double get w => ESizerUtil.sizeMap[this]?.w ?? 0;
+  double get w => ESizerUtil.getValueOf(this).w;
 
   /// Calculates the real height depending on the design's screen size
   ///
   /// Eg: 20.h -> will be 30 if design height is 300 && device height is 450
-  double get h => ESizerUtil.sizeMap[this]?.h ?? 0;
+  double get h => ESizerUtil.getValueOf(this).h;
 
   /// Calculates the radius depending on minimum between .w and .h
   ///
   /// Eg: 20.r -> will be 30 if design size is (300, 600) and device size is (450, 1000)
-  double get r => ESizerUtil.sizeMap[this]?.r ?? 0;
+  double get r => ESizerUtil.getValueOf(this).r;
 
   /// Calculates the font size
-  double get sp => ESizerUtil.sizeMap[this]?.sp ?? 0;
+  double get sp => ESizerUtil.getValueOf(this).sp;
 }

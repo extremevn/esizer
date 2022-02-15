@@ -134,10 +134,12 @@ String handleKeyValue(Map<String, dynamic> keyValue, [String? parentKey]) {
       contentString +=
           handleKeyValue(keyValue[key] as Map<String, dynamic>, currentKey);
     } else {
-      parentKey != null
-          ? contentString +=
-              "  static const ${parentKey.replaceAll('.', '_')}${capitalizeFirstWord(key)} = '$parentKey.$key';\n"
-          : contentString += "  static const $key = '$key';\n";
+      if (parentKey != null) {
+        contentString +=
+            "  static const ${uncapitalizedFirstWord(parentKey.split('.').map((e) => capitalizeFirstWord(e)).join())}${capitalizeFirstWord(key)} = '$parentKey.$key';\n";
+      } else {
+        contentString += "  static const $key = '$key';\n";
+      }
     }
   }
 
@@ -146,6 +148,10 @@ String handleKeyValue(Map<String, dynamic> keyValue, [String? parentKey]) {
 
 String capitalizeFirstWord(String word) {
   return word.replaceFirst(word[0], word[0].toUpperCase());
+}
+
+String uncapitalizedFirstWord(String word) {
+  return word.replaceFirst(word[0], word[0].toLowerCase());
 }
 
 void success(String outputPath) {

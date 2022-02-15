@@ -121,4 +121,11 @@ class ESizerUtil {
     }
     return result;
   }
+
+  static double getValueOf(String key){
+    if(sizeMap.containsKey(key)){
+      return sizeMap[key]!;
+    }
+    throw Exception("Not found value for key $key");
+  }
 }
